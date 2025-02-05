@@ -1,0 +1,208 @@
+/* 设置全局样式，包括字体、背景等 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://t.mwm.moe/pc);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* 让子元素垂直排列 */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 一言框样式 */
+.yiyan-box {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px; /* 与下方登录注册容器保持间距 */
+    animation: fadeIn 0.5s ease-out;
+}
+
+.yiyan-box h2 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 24px;
+}
+
+.yiyan-box p {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* 公共容器样式 */
+.common-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.contain {
+    display: block;
+}
+
+.rescontain {
+    display: none;
+}
+
+/* 标题盒子样式 */
+.box1 {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* 标题样式 */
+.box1 h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 24px;
+}
+
+/* 输入框和按钮所在盒子样式 */
+.box2 {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* 输入框和标签的包裹元素样式 */
+.box2 span {
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #ffffff;
+}
+
+/* 输入框样式 */
+.box2 input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+/* 输入框聚焦时的样式 */
+.box2 input:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+/* 按钮样式 */
+.box2 button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 按钮悬停时的样式 */
+.box2 button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 注册按钮样式 */
+.box2 button:last-child {
+    margin-left: 20px;
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 提示框 */
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #ff0303;
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
